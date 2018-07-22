@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="iv_shopping_cart_bg" type="id" />
+    <item name="tv_commodity_count" type="id" />
+</resources>

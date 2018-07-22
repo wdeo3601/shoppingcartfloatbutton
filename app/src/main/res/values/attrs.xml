@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShoppingCartFloatButton">
+        <attr name="float_image_resource" format="reference" />
+        <attr name="dot_to_right_of_float_margin_left" format="dimension" />
+        <attr name="dot_above_float_margin_bottom" format="dimension" />
+        <attr name="commodity_count" format="integer" />
+    </declare-styleable>
+</resources>
