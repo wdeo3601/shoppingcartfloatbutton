@@ -9,10 +9,13 @@
 
     <com.wdeo3601.shoppingcartfloatbutton.ShoppingCartFloatButton
         android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:commodity_count="10"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
         android:clipChildren="false"
+        app:commodity_count="10"
+        app:dot_above_float_margin_bottom="-23dp"
+        app:dot_to_right_of_float_margin_left="-23dp"
+        app:float_image_resource="@drawable/ic_shopping_cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

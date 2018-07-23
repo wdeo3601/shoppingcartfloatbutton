@@ -25,6 +25,8 @@ class ShoppingCartFloatButton : RelativeLayout {
     private var mCommodityCount = 0
     @DrawableRes
     private var mFloatImageResource: Int = -1
+    private var mCartViewWidth = 0
+    private var mCartViewHeight = 0
     var mDotBottomMargin = 0
     var mDotMarginStart = 0
 
@@ -33,6 +35,8 @@ class ShoppingCartFloatButton : RelativeLayout {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         val obtainStyledAttributes = context.obtainStyledAttributes(attrs, R.styleable.ShoppingCartFloatButton)
         mFloatImageResource = obtainStyledAttributes.getResourceId(R.styleable.ShoppingCartFloatButton_float_image_resource, R.drawable.ic_shopping_cart)
+        mCartViewWidth = obtainStyledAttributes.getDimensionPixelSize(R.styleable.ShoppingCartFloatButton_cart_view_width, AppUtil.INSTANCE.dp2px(44f))
+        mCartViewHeight = obtainStyledAttributes.getDimensionPixelSize(R.styleable.ShoppingCartFloatButton_cart_view_height, AppUtil.INSTANCE.dp2px(44f))
         mDotBottomMargin = obtainStyledAttributes.getDimensionPixelSize(R.styleable.ShoppingCartFloatButton_dot_above_float_margin_bottom, AppUtil.INSTANCE.dp2px(-23f))
         mDotMarginStart = obtainStyledAttributes.getDimensionPixelSize(R.styleable.ShoppingCartFloatButton_dot_to_right_of_float_margin_left, AppUtil.INSTANCE.dp2px(-23f))
         mCommodityCount = obtainStyledAttributes.getInteger(R.styleable.ShoppingCartFloatButton_commodity_count, 0)
@@ -43,8 +47,8 @@ class ShoppingCartFloatButton : RelativeLayout {
 
     private fun init() {
         ivShoppingCartBg = ImageView(context)
-        val ivParams = RelativeLayout.LayoutParams(AppUtil.INSTANCE.dp2px(44f)
-                , AppUtil.INSTANCE.dp2px(44f))
+        val ivParams = RelativeLayout.LayoutParams(mCartViewWidth
+                , mCartViewHeight)
         ivParams.addRule(RelativeLayout.CENTER_IN_PARENT)
         ivShoppingCartBg.layoutParams = ivParams
         ivShoppingCartBg.id = R.id.iv_shopping_cart_bg
@@ -78,6 +82,14 @@ class ShoppingCartFloatButton : RelativeLayout {
      */
     fun getCommodityCount(): Int {
         return mCommodityCount
+    }
+
+    fun setCartViewSize(dpWidth: Int, dpHeight: Int) {
+        mCartViewWidth = AppUtil.INSTANCE.dp2px(dpWidth.toFloat())
+        mCartViewHeight = AppUtil.INSTANCE.dp2px(dpHeight.toFloat())
+        ivShoppingCartBg.layoutParams.width = mCartViewWidth
+        ivShoppingCartBg.layoutParams.height = mCartViewHeight
+        ivShoppingCartBg.requestLayout()
     }
 
     fun getDotBottomMargin(): Int {

@@ -2,6 +2,8 @@
 <resources>
     <declare-styleable name="ShoppingCartFloatButton">
         <attr name="float_image_resource" format="reference" />
+        <attr name="cart_view_width" format="dimension" />
+        <attr name="cart_view_height" format="dimension" />
         <attr name="dot_to_right_of_float_margin_left" format="dimension" />
         <attr name="dot_above_float_margin_bottom" format="dimension" />
         <attr name="commodity_count" format="integer" />
