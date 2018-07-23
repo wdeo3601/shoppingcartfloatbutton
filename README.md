@@ -1,8 +1,8 @@
-# shoppingcartfloatbutton
+# shoppingcartfloatbutton  
 一个带小红点显示数量并且可控制小红点位置的购物车入口 button  
 
 ## 效果  
-![效果图](https://github.com/wdeo3601/shoppingcartfloatbutton/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.gif)
+![效果图](https://github.com/wdeo3601/shoppingcartfloatbutton/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.gif)  
 
 ## 集成步骤：  
 1. 复制 ShoppiingCartFloatButton.kt 类文件  
@@ -30,10 +30,10 @@
       ```  
 
       * app:float_image_resource——设置购物车图片  
-      * app:commodity_count——设置默认的购物车中商品数量
-      * app:cart_view_width——设置内部购物车图片 view 的宽度
-      * app:cart_view_height——设置内部购物车图片 view 的高度
-      * app:dot_above_float_margin_bottom——设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量
+      * app:commodity_count——设置默认的购物车中商品数量  
+      * app:cart_view_width——设置内部购物车图片 view 的宽度  
+      * app:cart_view_height——设置内部购物车图片 view 的高度  
+      * app:dot_above_float_margin_bottom——设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量  
       * app:dot_to_right_of_float_margin_left——设置小红点左下角相对于购物车右上角的 X 轴偏移量  
 
 1. 在代码中动态的设置购物车小红点数量  
@@ -44,8 +44,8 @@
       ```
       提供多个方法可以在代码里更改控件的属性  
       * `fun getCommodityCount(): Int` 获取当前购物车入口控件中商品的数量  
-      * `fun setCommodityCount(count: Int)` 设置小红点显示的商品数量
-      * `fun setCartViewSize(dpWidth: Int, dpHeight: Int)` 设置内部购物车 view 的尺寸，单位 dp
+      * `fun setCommodityCount(count: Int)` 设置小红点显示的商品数量  
+      * `fun setCartViewSize(dpWidth: Int, dpHeight: Int)` 设置内部购物车 view 的尺寸，单位 dp  
       * `fun getDotBottomMargin(): Int` 获取小红点左下角相对于购物车图片右上角的 Y 轴偏移量，像素值 px  
       * `fun setDotBottomMargin(dp: Int)` 设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量，单位 dp  
       * `fun getDotMarginStart(): Int` 获取小红点左下角相对于购物车右上角的 X 轴偏移量，单位 px  
