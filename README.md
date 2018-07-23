@@ -45,6 +45,7 @@
       * `fun setDotBottomMargin(dp: Int)` 设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量，单位 dp  
       * `fun getDotMarginStart(): Int` 获取小红点左下角相对于购物车右上角的 X 轴偏移量，单位 px  
       * `fun setDotMarginStart(dp: Int)` 设置小红点左下角相对于购物车右上角的 X 轴偏移量,单位 dp  
+      * `fun setFloatImageResource(@DrawableRes resId: Int)` 设置购物车浮动按钮的 image  
       
 ## 联系方式  
 
