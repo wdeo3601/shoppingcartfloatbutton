@@ -21,6 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:commodity_count="10"
+            app:cart_view_width="30dp"
+            app:cart_view_height="30dp"
             app:dot_above_float_margin_bottom="-23dp"
             app:dot_to_right_of_float_margin_left="-23dp"
             app:float_image_resource="@drawable/ic_shopping_cart"
@@ -28,8 +30,10 @@
       ```  
 
       * app:float_image_resource——设置购物车图片  
-      * app:commodity_count——设置默认的购物车中商品数量  
-      * app:dot_above_float_margin_bottom——设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量  
+      * app:commodity_count——设置默认的购物车中商品数量
+      * app:cart_view_width——设置内部购物车图片 view 的宽度
+      * app:cart_view_height——设置内部购物车图片 view 的高度
+      * app:dot_above_float_margin_bottom——设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量
       * app:dot_to_right_of_float_margin_left——设置小红点左下角相对于购物车右上角的 X 轴偏移量  
 
 1. 在代码中动态的设置购物车小红点数量  
@@ -40,7 +44,8 @@
       ```
       提供多个方法可以在代码里更改控件的属性  
       * `fun getCommodityCount(): Int` 获取当前购物车入口控件中商品的数量  
-      * `fun setCommodityCount(count: Int)` 设置小红点显示的商品数量  
+      * `fun setCommodityCount(count: Int)` 设置小红点显示的商品数量
+      * `fun setCartViewSize(dpWidth: Int, dpHeight: Int)` 设置内部购物车 view 的尺寸，单位 dp
       * `fun getDotBottomMargin(): Int` 获取小红点左下角相对于购物车图片右上角的 Y 轴偏移量，像素值 px  
       * `fun setDotBottomMargin(dp: Int)` 设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量，单位 dp  
       * `fun getDotMarginStart(): Int` 获取小红点左下角相对于购物车右上角的 X 轴偏移量，单位 px  

@@ -84,6 +84,9 @@ class ShoppingCartFloatButton : RelativeLayout {
         return mCommodityCount
     }
 
+    /**
+     * 设置内部购物车 view 的尺寸
+     */
     fun setCartViewSize(dpWidth: Int, dpHeight: Int) {
         mCartViewWidth = AppUtil.INSTANCE.dp2px(dpWidth.toFloat())
         mCartViewHeight = AppUtil.INSTANCE.dp2px(dpHeight.toFloat())
