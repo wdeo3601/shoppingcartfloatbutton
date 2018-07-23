@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val shopping = findViewById<ShoppingCartFloatButton>(R.id.view)
-        shopping.setCartViewSize(30,30)
         val seekBar = findViewById<SeekBar>(R.id.seekBar)
         seekBar.progress = shopping.getCommodityCount()
         seekBar.setOnSeekBarChangeListener(object :SeekBar.OnSeekBarChangeListener{

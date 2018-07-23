@@ -9,12 +9,12 @@
 
     <com.wdeo3601.shoppingcartfloatbutton.ShoppingCartFloatButton
         android:id="@+id/view"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:clipChildren="false"
         app:commodity_count="10"
-        app:cart_view_width="30dp"
-        app:cart_view_height="30dp"
+        app:cart_view_width="44dp"
+        app:cart_view_height="44dp"
         app:dot_above_float_margin_bottom="-23dp"
         app:dot_to_right_of_float_margin_left="-23dp"
         app:float_image_resource="@drawable/ic_shopping_cart"

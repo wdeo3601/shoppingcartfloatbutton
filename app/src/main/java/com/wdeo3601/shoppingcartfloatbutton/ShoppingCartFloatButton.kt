@@ -27,8 +27,8 @@ class ShoppingCartFloatButton : RelativeLayout {
     private var mFloatImageResource: Int = -1
     private var mCartViewWidth = 0
     private var mCartViewHeight = 0
-    var mDotBottomMargin = 0
-    var mDotMarginStart = 0
+    private var mDotBottomMargin = 0
+    private var mDotMarginStart = 0
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
