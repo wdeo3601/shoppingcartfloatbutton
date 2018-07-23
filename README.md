@@ -15,7 +15,7 @@
 
 1. 在布局文件中使用该控件  
 
-     ```
+     ```java
     <com.wdeo3601.shoppingcartfloatbutton.ShoppingCartFloatButton
             android:id="@+id/view"
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
 
 1. 在代码中动态的设置购物车小红点数量  
 
-      ```
+      ```java
       val shopping = findViewById<ShoppingCartFloatButton>(R.id.view)
       shopping.setCommodityCount(12)
       ```
