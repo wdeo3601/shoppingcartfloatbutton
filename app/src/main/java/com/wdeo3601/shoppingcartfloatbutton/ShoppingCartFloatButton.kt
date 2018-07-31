@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.ScaleAnimation
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -129,6 +130,17 @@ class ShoppingCartFloatButton : RelativeLayout {
      * 设置小红点显示的商品数量
      */
     fun setCommodityCount(count: Int) {
+        setCommodityCount(count, false)
+    }
+
+    /**
+     * 设置小红点显示的商品数量(有动画)
+     */
+    fun setCommodityCountWithAnim(count: Int) {
+        setCommodityCount(count, true)
+    }
+
+    private fun setCommodityCount(count: Int, doAnim: Boolean) {
         if (!::tvCommodityCount.isInitialized) {
             throw UninitializedPropertyAccessException("lateinit View tvCommodityCount is Uninitialized")
         }
@@ -143,11 +155,11 @@ class ShoppingCartFloatButton : RelativeLayout {
             tvCommodityCount.visibility = View.INVISIBLE
         } else {
             tvCommodityCount.visibility = View.VISIBLE
-            setRealCommodityCount(mCommodityCount)
+            setRealCommodityCount(mCommodityCount, doAnim)
         }
     }
 
-    private fun setRealCommodityCount(intCount: Int) {
+    private fun setRealCommodityCount(intCount: Int, doAnim: Boolean) {
         val strCount =
                 if (intCount > 99) {
                     tvCommodityCount.textSize = 9f
@@ -160,6 +172,15 @@ class ShoppingCartFloatButton : RelativeLayout {
                     }
                     "$intCount"
                 }
+
         tvCommodityCount.text = strCount
+
+        if (doAnim) {
+            val scaleAnimation = ScaleAnimation(1f, 1.1f, 1f, 1.1f, ScaleAnimation.RELATIVE_TO_SELF, 0.5f, ScaleAnimation.RELATIVE_TO_SELF, 0.5f)
+            scaleAnimation.duration = 200
+            scaleAnimation.repeatMode = ScaleAnimation.REVERSE
+            scaleAnimation.repeatCount = 1
+            tvCommodityCount.startAnimation(scaleAnimation)
+        }
     }
 }
