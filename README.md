@@ -44,13 +44,19 @@
       ```
       提供多个方法可以在代码里更改控件的属性  
       * `fun getCommodityCount(): Int` 获取当前购物车入口控件中商品的数量  
-      * `fun setCommodityCount(count: Int)` 设置小红点显示的商品数量  
+      * `fun setCommodityCount(count: Int)` 设置小红点显示的商品数量
+      * `fun setCommodityCountWithAnim(count: Int)`  设置小红点显示的商品数量，小红点 View 有一个短暂的缩放动画
       * `fun setCartViewSize(dpWidth: Int, dpHeight: Int)` 设置内部购物车 view 的尺寸，单位 dp  
       * `fun getDotBottomMargin(): Int` 获取小红点左下角相对于购物车图片右上角的 Y 轴偏移量，像素值 px  
       * `fun setDotBottomMargin(dp: Int)` 设置小红点左下角相对于购物车图片右上角的 Y 轴偏移量，单位 dp  
       * `fun getDotMarginStart(): Int` 获取小红点左下角相对于购物车右上角的 X 轴偏移量，单位 px  
       * `fun setDotMarginStart(dp: Int)` 设置小红点左下角相对于购物车右上角的 X 轴偏移量,单位 dp  
-      * `fun setFloatImageResource(@DrawableRes resId: Int)` 设置购物车浮动按钮的 image  
+      * `fun setFloatImageResource(@DrawableRes resId: Int)` 设置购物车浮动按钮的 image
+
+## 更新记录
+
+**2018.7.31**
+    添加方法 `fun setCommodityCountWithAnim(count: Int)`，加入购物车时可以触发小红点动画
       
 ## 联系方式  
 
