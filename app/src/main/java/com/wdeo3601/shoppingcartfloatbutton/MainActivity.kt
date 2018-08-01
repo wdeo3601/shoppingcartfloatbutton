@@ -2,6 +2,7 @@ package com.wdeo3601.shoppingcartfloatbutton
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
@@ -9,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val shopping = findViewById<ShoppingCartFloatButton>(R.id.view)
         val seekBar = findViewById<SeekBar>(R.id.seekBar)
         seekBar.progress = shopping.getCommodityCount()
@@ -51,5 +53,10 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
             }
         })
+
+        val btAdd = findViewById<Button>(R.id.bt_add)
+        btAdd.setOnClickListener {
+            shopping.setCommodityCountWithAnim(shopping.getCommodityCount()+1)
+        }
     }
 }
