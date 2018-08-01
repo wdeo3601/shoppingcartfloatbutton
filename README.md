@@ -2,7 +2,7 @@
 一个带小红点显示数量并且可控制小红点位置的购物车入口 button  
 
 ## 效果  
-![效果图](https://github.com/wdeo3601/shoppingcartfloatbutton/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.gif)  
+![效果图](https://github.com/wdeo3601/shoppingcartfloatbutton/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE.gif)![小红点动画](https://github.com/wdeo3601/shoppingcartfloatbutton/blob/master/%E5%B0%8F%E7%BA%A2%E7%82%B9%E5%8A%A8%E7%94%BB.gif?raw=true)  
 
 ## 集成步骤：  
 1. 复制 ShoppiingCartFloatButton.kt 类文件  
